@@ -8,7 +8,7 @@ Camera rotation was disabled, because it is not working properly and have lags, 
 
 1. Clone this repository to your resource folder:
 ```bash 
-git clone
+git clone https://github.com/Z1ksS/mask-shop.git
 ```
 
 2. First of all, you need to setup web project for this you need to navigate to the web directory
