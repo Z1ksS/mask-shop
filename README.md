@@ -1,5 +1,7 @@
 # Mask Shop System
 
+This is test task for FiveM. This system gives possibility for player to choose, buy and use mask on player model.
+
 ## Known Problems
 
 Camera rotation was disabled, because it is not working properly and have lags, also the data storage wasn't implemented
