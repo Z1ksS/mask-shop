@@ -253,6 +253,8 @@ export default {
     this.masksList = {
         1: {label: 'Mask 1', price: 1500, weight: 0.33, colors: [0, 1]},
         2: {label: 'Mask 2', price: 1234, weight: 0.12, colors: [0, 1, 2]},
+        5: {label: 'Mask 5', price: 899, weight: 0.12, colors: [0, 1, 2, 5, 3]},
+        6: {label: 'Mask 6', price: 999, weight: 0.12, colors: [0, 1, 4]},
         14: {label: 'Mask 14', price: 123, weight: 0.42, colors: [0, 1, 2, 3 , 4, 5, 6, 7, 8, 9, 10]}
     };
     //this.ForTheTest();
