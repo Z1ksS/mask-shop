@@ -1,0 +1,405 @@
+$first-font: Gilroy, sans-serif
+$second-font: Akrobat, sans-serif
+
+.hide-mask-notifications-enter-active, .hide-mask-notifications-leave-active
+  transition: opacity 0.8s ease
+.hide-mask-notifications-enter, .hide-mask-notifications-enter-from, .hide-mask-notifications-leave-to
+  opacity: 0
+
+#mask-shop 
+  position: relative
+  user-select: none
+  height: 100vh
+  .content-player-rotate 
+    position: absolute
+    left: 50%
+    top: 0
+    transform: translateX(-50%)
+    width: calc(1000px * var(--scale-coefficient))
+    height: 100vh
+  .content-right-top-wrap 
+    position: absolute
+    top: calc(22px * var(--scale-coefficient))
+    right: calc(32px * var(--scale-coefficient))
+    list-style: none
+    li 
+      display: flex
+      justify-content: right
+      align-items: center
+      margin-bottom: calc(9px * var(--scale-coefficient))
+      span 
+        color: rgba(255, 255, 255, 0.60)
+        font-family: $second-font
+        font-size: calc(20px * var(--scale-coefficient))
+        font-style: normal
+        font-weight: 600
+        line-height: normal
+        letter-spacing: 1px
+        margin-right: calc(13px * var(--scale-coefficient))
+      img 
+        width: calc(16px * var(--scale-coefficient))
+        height: calc(21px * var(--scale-coefficient))
+  .content-left-wrap 
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    background: linear-gradient(0deg, #101010, #101010), linear-gradient(0deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07))
+    padding-left: calc(15px * var(--scale-coefficient))
+    .mask-shop__logo 
+      display: flex
+      margin-top: calc(31px * var(--scale-coefficient))
+      justify-content: center
+      align-items: center
+      img 
+        width: calc(40px * var(--scale-coefficient))
+        height: calc(40px * var(--scale-coefficient))
+      span 
+        display: block
+        font-family: $second-font
+        font-weight: 800
+        font-style: normal
+        font-size: calc(40px * var(--scale-coefficient))
+        background: linear-gradient(180deg, #FF6E41 0%, #A24528 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        -webkit-text-stroke: 1px #FF6E41
+        text-shadow: 0px 4px 53px rgba(255, 110, 65, 0.25)
+        text-transform: uppercase
+        margin-right: calc(8px * var(--scale-coefficient))
+    .content-left-selected-info-wrap 
+      width: calc(323px * var(--scale-coefficient))
+      display: flex
+      justify-content: space-between
+      margin-top: calc(24px * var(--scale-coefficient))
+      .content-left-selected-info-title 
+        color: rgba(255, 255, 255, 0.34)
+        font-family: $second-font
+        font-size: calc(20px * var(--scale-coefficient))
+        line-height: calc(32px * var(--scale-coefficient))
+        font-weight: 400
+        font-style: normal
+        margin-right: calc(107px * var(--scale-coefficient))
+      .content-left-selected-info-numbers 
+        display: flex
+        justify-content: flex-end
+        .content-left-selected-info-numbers-text-select 
+          color: rgba(255, 255, 255, 0.34)
+          font-family: $first-font
+          font-size: calc(20px * var(--scale-coefficient))
+          line-height: calc(32px * var(--scale-coefficient))
+          font-weight: 400
+          font-style: normal
+          letter-spacing: calc(-0.3px * var(--scale-coefficient))
+        .content-left-selected-info-numbers-text 
+          color: rgba(255, 255, 255, 0.34)
+          font-family: $first-font
+          font-size: calc(16px * var(--scale-coefficient))
+          line-height: calc(32px * var(--scale-coefficient))
+          font-weight: 400
+          font-style: normal
+          letter-spacing: calc(-0.24px * var(--scale-coefficient))
+    .content-left-search 
+      position: relative
+      margin-top: calc(15px * var(--scale-coefficient))
+      margin-right: calc(15px * var(--scale-coefficient))
+      width: calc(323px * var(--scale-coefficient))
+      height: calc(39px * var(--scale-coefficient))
+      input 
+        color: rgba(255, 255, 255, 1)
+        font-family: $second-font
+        font-size: calc(20px * var(--scale-coefficient))
+        line-height: calc(24px * var(--scale-coefficient))
+        font-weight: 600
+        font-style: normal
+        padding-left: calc(6px * var(--scale-coefficient))
+        padding-right: calc(32px * var(--scale-coefficient))
+        width: 100%
+        height: 100%
+        flex-shrink: 0
+        border-radius: 2px
+        border: 1px solid rgba(255, 255, 255, 0.07)
+        background: rgba(255, 255, 255, 0.03)
+        outline: none
+      img 
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: calc(13px * var(--scale-coefficient))
+        width: calc(12px * var(--scale-coefficient))
+        height: calc(13px * var(--scale-coefficient))
+    .content-left-list-wrap 
+      position: relative
+      max-height: calc(845px * var(--scale-coefficient))
+      margin-top: calc(15px * var(--scale-coefficient))
+      width: calc(323px * var(--scale-coefficient))
+      overflow-y: auto
+      overflow-x: hidden
+      box-sizing: border-box
+      padding-right: calc(12px * var(--scale-coefficient))
+      &::-webkit-scrollbar 
+        width: calc(8px * var(--scale-coefficient))
+        border-radius: calc(5px * var(--scale-coefficient))
+        background: rgba(30, 30, 30, 0.60)
+      &::-webkit-scrollbar-thumb 
+        border-radius: calc(5px * var(--scale-coefficient))
+        background: #FF6E41
+      .content-left-list-item-wrap 
+        width: 100%
+        height: calc(32px * var(--scale-coefficient))
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: calc(5px * var(--scale-coefficient))
+        padding: 0 calc(10px * var(--scale-coefficient)) 0 calc(5px * var(--scale-coefficient))
+        border-radius: calc(2px * var(--scale-coefficient))
+        overflow: hidden
+        margin-right: calc(12px * var(--scale-coefficient))
+        &:last-child 
+          margin-bottom: calc(0px * var(--scale-coefficient))
+        &:hover
+          border-radius: 2px
+          border: 0.5px solid #FF6E41
+        .content-left-list-item-name 
+          overflow: hidden
+          text-overflow: ellipsis
+          white-space: nowrap
+          max-width: calc(200px * var(--scale-coefficient))
+          padding-left: calc(2px * var(--scale-coefficient))
+          color: rgba(255, 255, 255, 0.7)
+          font-family: $first-font
+          font-size: calc(20px * var(--scale-coefficient))
+          line-height: calc(32px * var(--scale-coefficient))
+          font-weight: 400
+          font-style: normal
+          line-height: 157.5%
+          letter-spacing: -0.3px
+          z-index: 999
+        .content-left-list-item-price-wrap 
+          display: flex
+          .content-left-list-item-price-text 
+            padding-left: calc(2px * var(--scale-coefficient))
+            color: rgba(255, 255, 255, 0.7)
+            font-family: $first-font
+            font-size: calc(20px * var(--scale-coefficient))
+            line-height: calc(32px * var(--scale-coefficient))
+            font-weight: 400
+            font-style: normal
+          .content-left-list-item-price-img 
+            padding-left: calc(2px * var(--scale-coefficient))
+            color: rgba(0, 255, 72, 0.7)
+            font-family: $first-font
+            font-size: calc(20px * var(--scale-coefficient))
+            line-height: calc(32px * var(--scale-coefficient))
+            font-weight: 400
+            font-style: normal
+    .content-center-body-part-wrap-select 
+      position: relative
+      border-radius: calc(2px * var(--scale-coefficient))
+      border: 0.5px solid #FF6E41
+      background: linear-gradient(180deg, rgba(255, 110, 65, 0.80) 0%, rgba(161, 69, 40, 0.80) 100%)
+      img
+        position: absolute
+        width: calc(77px * var(--scale-coefficient))
+        height: calc(58px * var(--scale-coefficient))
+        top: calc(-9px * var(--scale-coefficient))
+        right: calc(72px * var(--scale-coefficient))
+      .content-left-list-item-name 
+        color: #FFFFFF !important
+      .content-left-list-item-price-text
+        color: #FFFFFF !important
+      .content-left-list-item-price-img 
+        color: #00FF48 !important
+  .content-right-wrap
+    position: absolute
+    right: calc(38px * var(--scale-coefficient))
+    width: calc(353px * var(--scale-coefficient))
+    .content-right__notifications
+      width: calc(353px * var(--scale-coefficient))
+      top: calc(298px * var(--scale-coefficient))
+      min-height: calc(100px * var(--scale-coefficient))
+      width: 100%
+    .content-right__result-mask-wrap
+      position: fixed
+      top: 50%
+      transform: translateY(-50%)
+      padding: 0 calc(30px * var(--scale-coefficient))
+      border-radius: calc(8px * var(--scale-coefficient))
+      border: 1px solid rgba(255, 255, 255, 0.07)
+      background: #101010
+      .content-right__mask-name-weight-wrap 
+        display: flex
+        justify-content: space-between
+        margin-top: calc(22px * var(--scale-coefficient))
+        .content-right__mask-name-weight--name 
+          overflow: hidden
+          text-overflow: ellipsis
+          white-space: nowrap
+          max-width: calc(220px * var(--scale-coefficient))
+          color: #FFFFFF
+          font-family: $first-font
+          font-size: calc(20px * var(--scale-coefficient))
+          line-height: calc(32px * var(--scale-coefficient))
+          font-weight: 400
+          font-style: normal
+        .content-right__mask-name-weight--weight-wrap 
+          display: flex
+          align-items: flex-end
+          .content-right__mask-name-weight--weight-wrap--num 
+            color: #FFFFFF
+            font-family: $first-font
+            font-size: calc(16px * var(--scale-coefficient))
+            line-height: calc(25px * var(--scale-coefficient))
+            font-weight: 400
+            font-style: normal
+            margin-right: calc(3px * var(--scale-coefficient))
+          .content-right__mask-name-weight--weight-wrap--text 
+            color: rgba(255, 255, 255, 0.34)
+            font-family: $first-font
+            font-size: calc(14px * var(--scale-coefficient))
+            line-height: calc(22px * var(--scale-coefficient))
+            font-weight: 400
+            font-style: normal
+            margin-right: calc(2px * var(--scale-coefficient))
+      .content-right__mask-color-wrap 
+        display: flex
+        justify-content: space-between
+        margin-top: calc(17px * var(--scale-coefficient))
+        .content-right__mask-color-title 
+          color: rgba(255, 255, 255, 0.70)
+          font-family: $first-font
+          font-size: calc(16px * var(--scale-coefficient))
+          line-height: calc(25px * var(--scale-coefficient))
+          font-weight: 400
+          font-style: normal
+        .content-right__mask-color-select-wrap 
+          display: flex
+          align-items: center
+          justify-content: space-between
+          width: calc(70px * var(--scale-coefficient))
+        .content-right__mask-color-left-arrow 
+          width: calc(11px * var(--scale-coefficient))
+          height: calc(13px * var(--scale-coefficient))
+          margin-right: calc(5px * var(--scale-coefficient))
+          stroke: white
+          stroke-opacity: 0.7
+        .content-right__mask-color-select-color 
+          color: rgba(255, 255, 255, 255)
+          font-family: $first-font
+          font-size: calc(16px * var(--scale-coefficient))
+          line-height: calc(25px * var(--scale-coefficient))
+          font-weight: 400
+          font-style: normal
+        .content-right__mask-color-length-color 
+          color: rgba(255, 255, 255, 0.34)
+          font-family: $first-font
+          font-size: calc(16px * var(--scale-coefficient))
+          line-height: calc(25px * var(--scale-coefficient))
+          font-weight: 400
+          font-style: normal
+        .content-right__mask-color-right-arrow 
+          width: calc(11px * var(--scale-coefficient))
+          height: calc(13px * var(--scale-coefficient))
+          transform: rotate(180deg)
+          margin-left: calc(5px * var(--scale-coefficient))
+          stroke: white
+          stroke-opacity: 0.7
+        .content-right__mask-color-arrow-active
+          &:hover 
+            stroke: #FF6E41
+            stroke-opacity: 1.0
+      .content-right__mask-count-wrap 
+        display: flex
+        justify-content: space-between
+        margin-top: calc(17px * var(--scale-coefficient))
+        .content-right__mask-count-title 
+          color: rgba(255, 255, 255, 0.70)
+          font-family: $first-font
+          font-size: calc(16px * var(--scale-coefficient))
+          line-height: calc(25px * var(--scale-coefficient))
+          font-weight: 400
+          font-style: normal
+        .content-right__mask-count-select-wrap 
+          display: flex
+          align-items: center
+          justify-content: space-between
+          width: calc(70px * var(--scale-coefficient))
+          .content-right__mask-count-minus 
+            width: calc(13px * var(--scale-coefficient))
+            height: calc(13px * var(--scale-coefficient))
+            stroke: #FFFFFF
+            stroke-opacity: 0.7
+          .content-right__mask-count-count-text 
+            color: #FFFFFF
+            font-family: $first-font
+            font-size: calc(16px * var(--scale-coefficient))
+            line-height: calc(25px * var(--scale-coefficient))
+            font-weight: 400
+            font-style: normal
+          .content-right__mask-count-plus 
+            width: calc(13px * var(--scale-coefficient))
+            height: calc(13px * var(--scale-coefficient))
+            stroke: #FFFFFF
+            stroke-opacity: 0.7
+          .content-right__mask-count-active
+            &:hover
+              stroke: #FF6E41
+              stroke-opacity: 1.0
+      .content-right__mask-price-wrap 
+        display: flex
+        justify-content: space-between
+        margin-top: calc(17px * var(--scale-coefficient))
+        .content-right__mask-price-title 
+          color: rgba(255, 255, 255, 0.70)
+          font-family: $first-font
+          font-size: calc(16px * var(--scale-coefficient))
+          line-height: calc(25px * var(--scale-coefficient))
+          font-weight: 400
+          font-style: normal
+        .content-right__mask-price-block-wrap 
+          display: flex
+          .content-right__mask-price 
+            color: #FFFFFF
+            font-family: $first-font
+            font-size: calc(16px * var(--scale-coefficient))
+            line-height: calc(25px * var(--scale-coefficient))
+            font-weight: 400
+            font-style: normal
+            margin-right: calc(3px * var(--scale-coefficient))
+          .content-right__mask-price-dollar 
+            color: #00FF48
+            font-family: $first-font
+            font-size: calc(16px * var(--scale-coefficient))
+            line-height: calc(25px * var(--scale-coefficient))
+            font-weight: 400
+            font-style: normal
+      .content-right__mask-btns-wrap 
+        width: calc(300px * var(--scale-coefficient))
+        margin-top: calc(28px * var(--scale-coefficient))
+        display: flex
+        justify-content: space-between
+        margin-bottom: calc(18px * var(--scale-coefficient))
+        .content-right__mask-btns-btn 
+          width: calc(140px * var(--scale-coefficient))
+          height: calc(35px * var(--scale-coefficient))
+          border-radius: calc(5px * var(--scale-coefficient))
+          border: 1px solid rgba(255, 255, 255, 0.07)
+          background: #101010
+          color: #FFF
+          font-family: $second-font
+          font-size: calc(20px * var(--scale-coefficient))
+          font-style: normal
+          font-weight: 600
+          line-height: 157.5%
+          letter-spacing: -0.3px
+          &:hover
+            border: 1px solid #FF6E41
+            background: radial-gradient(539.11% 270.5% at 50.17% 50%, #FF774D 0%, rgba(255, 61, 0, 0.00) 100%)
+            box-shadow: 0px 0px 37px 0px #FF6E41 inset, 0px 4px 56px 0px rgba(255, 61, 0, 0.25)
+
+
+
+
+
+

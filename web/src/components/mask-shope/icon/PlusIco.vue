@@ -1,0 +1,6 @@
+<template>
+  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line y1="6.5" x2="13" y2="6.5"/>
+    <line x1="6.5" y1="13" x2="6.5"/>
+  </svg>
+</template>
